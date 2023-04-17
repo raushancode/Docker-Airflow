@@ -1,0 +1,39 @@
+[2023-04-15 12:02:45,066] {taskinstance.py:877} INFO - Dependencies all met for <TaskInstance: spotify_final_dag.spotify_etl_final 2023-04-15T12:02:23.309632+00:00 [queued]>
+[2023-04-15 12:02:45,503] {taskinstance.py:877} INFO - Dependencies all met for <TaskInstance: spotify_final_dag.spotify_etl_final 2023-04-15T12:02:23.309632+00:00 [queued]>
+[2023-04-15 12:02:45,518] {taskinstance.py:1068} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-15 12:02:45,551] {taskinstance.py:1069} INFO - Starting attempt 1 of 2
+[2023-04-15 12:02:45,567] {taskinstance.py:1070} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-15 12:02:45,874] {taskinstance.py:1089} INFO - Executing <Task(PythonOperator): spotify_etl_final> on 2023-04-15T12:02:23.309632+00:00
+[2023-04-15 12:02:45,911] {standard_task_runner.py:52} INFO - Started process 82 to run task
+[2023-04-15 12:02:45,943] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'spotify_final_dag', 'spotify_etl_final', '2023-04-15T12:02:23.309632+00:00', '--job-id', '166', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/spotify_final_dag.py', '--cfg-path', '/tmp/tmpo52wxomu', '--error-file', '/tmp/tmpk7nh17at']
+[2023-04-15 12:02:45,967] {standard_task_runner.py:77} INFO - Job 166: Subtask spotify_etl_final
+[2023-04-15 12:02:46,458] {logging_mixin.py:104} INFO - Running <TaskInstance: spotify_final_dag.spotify_etl_final 2023-04-15T12:02:23.309632+00:00 [running]> on host 75651b8604e6
+[2023-04-15 12:02:46,904] {taskinstance.py:1283} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=airflow@example.com
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=spotify_final_dag
+AIRFLOW_CTX_TASK_ID=spotify_etl_final
+AIRFLOW_CTX_EXECUTION_DATE=2023-04-15T12:02:23.309632+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-04-15T12:02:23.309632+00:00
+[2023-04-15 12:02:46,950] {logging_mixin.py:104} INFO - started
+[2023-04-15 12:02:48,706] {logging_mixin.py:104} INFO -      song_date  ...      artist_name
+0   2023-04-15  ...           Pritam
+1   2023-04-15  ...   Vishal-Shekhar
+2   2023-04-15  ...             King
+3   2023-04-15  ...           Pritam
+4   2023-04-15  ...     Kaifi Khalil
+..         ...  ...              ...
+60  2023-04-15  ...  Various Artists
+61  2023-04-15  ...   Jubin Nautiyal
+62  2023-04-15  ...    Kanika Kapoor
+63  2023-04-15  ...           Pritam
+64  2023-04-15  ...     Rochak Kohli
+
+[65 rows x 3 columns]
+[2023-04-15 12:02:48,747] {base.py:78} INFO - Using connection to: id: postgre_sql. Host: postgres, Port: 5432, Schema: airflow, Login: airflow, Password: XXXXXXXX, extra: None
+[2023-04-15 12:02:50,128] {python.py:118} INFO - Done. Returned value was: None
+[2023-04-15 12:02:50,242] {taskinstance.py:1192} INFO - Marking task as SUCCESS. dag_id=spotify_final_dag, task_id=spotify_etl_final, execution_date=20230415T120223, start_date=20230415T120245, end_date=20230415T120250
+[2023-04-15 12:02:50,473] {taskinstance.py:1246} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-04-15 12:02:50,560] {local_task_job.py:146} INFO - Task exited with return code 0
