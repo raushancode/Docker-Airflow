@@ -11,8 +11,8 @@ def return_dataframe():
     url = "https://accounts.spotify.com/api/token"
     payload = {
         "grant_type": "client_credentials",
-        "client_id": "3ffea4ed6eb9442c8328411f31144ba3",
-        "client_secret": "a2ca59ecb52a476190565bccafa7ae7f"
+        "client_id": "enter ur client id", # intentionally not provided to avoid exposure
+        "client_secret": "enter ur client secret"  # intentionally not provided
     }
     headers = {
         "Content-Type": "application/x-www-form-urlencoded"
