@@ -2,10 +2,6 @@ import requests
 import pandas as pd
 from datetime import datetime
 import json
-from sqlalchemy import create_engine
-import sqlite3
-import psycopg2
-from sqlalchemy.orm import sessionmaker
 
 def return_dataframe():
     url = "https://accounts.spotify.com/api/token"
@@ -63,7 +59,7 @@ def Transform_df(load_df):
     return load_df
 
 def spotify_etl():
-    #Importing the songs_df from the Extract.py
+
     load_df=return_dataframe()
     Data_Quality(load_df)
     #calling the transformation
